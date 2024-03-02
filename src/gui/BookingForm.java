@@ -1,5 +1,7 @@
 package gui;
 
+import java.text.SimpleDateFormat;
+
 /**
  *
  * @author Luisa Eustaquio
@@ -32,8 +34,8 @@ public class BookingForm extends javax.swing.JFrame {
         cbDelivery = new javax.swing.JComboBox<>();
         cbService = new javax.swing.JComboBox<>();
         cbAddOns = new javax.swing.JComboBox<>();
-        tempFldDate = new javax.swing.JTextField();
         btnReview = new javax.swing.JButton();
+        fldDate = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,6 +55,11 @@ public class BookingForm extends javax.swing.JFrame {
         cbService.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fresh Essentials", "Gentle Care", "Sparkle & Shine", "Luxury Bliss", "Royal Elegance" }));
 
         cbAddOns.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "None", "Pack 1", "Pack 2", "Pack 3", "Pack 4" }));
+        cbAddOns.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbAddOnsActionPerformed(evt);
+            }
+        });
 
         btnReview.setText("Review");
         btnReview.addActionListener(new java.awt.event.ActionListener() {
@@ -71,14 +78,16 @@ public class BookingForm extends javax.swing.JFrame {
                     .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(tempFldDate, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(fldDate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(fldAddress)
                             .addComponent(fldName, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(fldContact)
-                            .addComponent(cbAddOns, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(106, 106, 106)
+                                .addComponent(cbAddOns, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(cbDelivery, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cbService, javax.swing.GroupLayout.Alignment.LEADING, 0, 141, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
+                            .addComponent(cbService, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnBack, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -110,9 +119,9 @@ public class BookingForm extends javax.swing.JFrame {
                         .addComponent(btnReview)))
                 .addGap(14, 14, 14)
                 .addComponent(cbAddOns, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tempFldDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(fldDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -140,6 +149,10 @@ public class BookingForm extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnBackActionPerformed
 
+    private void cbAddOnsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbAddOnsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbAddOnsActionPerformed
+
     private void reviewInput() {
         selectedAddOn = (String) cbAddOns.getSelectedItem();
         selectedDelivery = (String) cbDelivery.getSelectedItem();
@@ -148,7 +161,8 @@ public class BookingForm extends javax.swing.JFrame {
         contact = fldContact.getText();
         name = fldName.getText();
         note = fldNote.getText();
-        tempDate = tempFldDate.getText();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        tempDate = dateFormat.format(fldDate.getDate());
         ReviewDialog reviewDialog = new ReviewDialog(this, true);
         reviewDialog.setReviewDetails(address, contact, name, selectedService, selectedAddOn, selectedDelivery, note, tempDate);
         reviewDialog.setVisible(true);
@@ -197,9 +211,9 @@ public class BookingForm extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbService;
     private javax.swing.JTextField fldAddress;
     private javax.swing.JTextField fldContact;
+    private com.toedter.calendar.JDateChooser fldDate;
     private javax.swing.JTextField fldName;
     private javax.swing.JTextArea fldNote;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField tempFldDate;
     // End of variables declaration//GEN-END:variables
 }

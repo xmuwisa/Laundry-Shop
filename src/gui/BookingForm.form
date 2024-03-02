@@ -29,15 +29,18 @@
                   <Component id="jScrollPane1" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="tempFldDate" alignment="0" max="32767" attributes="0"/>
+                          <Component id="fldDate" alignment="0" max="32767" attributes="0"/>
                           <Component id="fldAddress" max="32767" attributes="0"/>
                           <Component id="fldName" alignment="0" max="32767" attributes="0"/>
                           <Component id="fldContact" alignment="1" max="32767" attributes="0"/>
-                          <Component id="cbAddOns" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
+                              <Component id="cbAddOns" max="32767" attributes="0"/>
+                          </Group>
                           <Component id="cbDelivery" alignment="0" max="32767" attributes="0"/>
-                          <Component id="cbService" alignment="0" pref="141" max="32767" attributes="0"/>
+                          <Component id="cbService" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="94" max="32767" attributes="0"/>
+                      <EmptySpace pref="56" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="btnBack" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
@@ -79,9 +82,9 @@
               </Group>
               <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
               <Component id="cbAddOns" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="tempFldDate" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
+              <Component id="fldDate" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -157,11 +160,12 @@
           </StringArray>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbAddOnsActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
-    </Component>
-    <Component class="javax.swing.JTextField" name="tempFldDate">
     </Component>
     <Component class="javax.swing.JButton" name="btnReview">
       <Properties>
@@ -170,6 +174,8 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnReviewActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="com.toedter.calendar.JDateChooser" name="fldDate">
     </Component>
   </SubComponents>
 </Form>
