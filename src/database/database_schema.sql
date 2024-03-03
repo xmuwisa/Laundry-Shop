@@ -57,7 +57,8 @@ CREATE TABLE tbl_transactions (
     t_dropOffDate DATE NOT NULL,
     t_submittedDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     t_completedDate DATE,
-    t_status ENUM('pending', 'done') DEFAULT 'pending',
+    t_transacStatus ENUM('pending', 'approved', 'request cancel', 'cancelled') DEFAULT 'pending',
+    t_paymentStatus ENUM('pending', 'paid') DEFAULT 'pending',
     FOREIGN KEY (c_id) REFERENCES tbl_customers(c_id),
     FOREIGN KEY (s_id) REFERENCES tbl_services(s_id),
     FOREIGN KEY (a_id) REFERENCES tbl_addOns(a_id)

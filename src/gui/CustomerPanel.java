@@ -1,12 +1,21 @@
 package gui;
 import session.SessionManager;
+import database.DatabaseUtils;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author Luisa Eustaquio
  */
 public class CustomerPanel extends javax.swing.JFrame {
-
+    String selectedSort = "All";
+    
     /**
      * Creates new form CustomerPanel
      */
@@ -14,6 +23,21 @@ public class CustomerPanel extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         displayLoggedInUser();
+        displayTransactions(selectedSort);
+        
+        tblTransactions.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                if (!e.getValueIsAdjusting()) {
+                    int selectedRow = tblTransactions.getSelectedRow();
+                    if (selectedRow != -1) {
+                        int transactionID = (int) tblTransactions.getValueAt(selectedRow, 0);
+                        String transactionStatus = (String) tblTransactions.getValueAt(selectedRow, 6);
+                        displayDetails(transactionID, transactionStatus);
+                    }
+                }
+            }
+        });
     }
 
     /**
@@ -29,6 +53,9 @@ public class CustomerPanel extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         lblUsername = new javax.swing.JLabel();
         btnLogout = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblTransactions = new javax.swing.JTable();
+        cbSort = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -51,44 +78,130 @@ public class CustomerPanel extends javax.swing.JFrame {
             }
         });
 
+        tblTransactions.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Transaction ID", "Point Person", "Delivery Method", "Drop Off Date", "Completed Date", "Submitted Date", "Transaction Status", "Payment Status"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(tblTransactions);
+
+        cbSort.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "Pending", "Approved", "Request Cancel", "Cancelled", "Completed" }));
+        cbSort.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbSortActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(152, 152, 152)
-                .addComponent(jLabel1)
-                .addContainerGap(158, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btnLogout)
-                        .addGap(17, 17, 17))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(lblUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnBookForm)
-                        .addContainerGap())))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 644, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jLabel1)
+                                .addGap(83, 83, 83)))
+                        .addComponent(cbSort, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(33, 33, 33)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnBookForm, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnLogout, javax.swing.GroupLayout.Alignment.TRAILING))))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnBookForm)
-                    .addComponent(lblUsername))
-                .addGap(83, 83, 83)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, Short.MAX_VALUE)
-                .addComponent(btnLogout)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnBookForm)
+                            .addComponent(lblUsername))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnLogout)
+                            .addComponent(jLabel1)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(cbSort, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(31, 31, 31)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 456, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private String loggedInUsername;
+    
+    private void displayDetails(int transactionID, String transactionStatus) {
+        TransactionDetailsPanel transactionDetailsPanel = new TransactionDetailsPanel(transactionID, transactionStatus);
+        transactionDetailsPanel.setVisible(true);
+        this.dispose();
+    }
+    
+    private void displayTransactions(String selectedSort){
+        DefaultTableModel model = (DefaultTableModel) tblTransactions.getModel();
+        model.setRowCount(0);
+
+        int userId = SessionManager.getUserIdByUsername(loggedInUsername);
+
+        if (userId == -1) {
+            System.out.println("User ID not found for username: " + loggedInUsername);
+            return;
+        }
+
+        try (Connection conn = DatabaseUtils.getConnection();
+             PreparedStatement stmt = conn.prepareStatement( "SELECT t.t_id, t.c_id, c.c_name, t.t_deliveryMethod, t.t_dropOffDate, t.t_completedDate, t.t_submittedDate, t.t_transacStatus, t.t_paymentStatus "
+                                                        + "FROM tbl_transactions t "
+                                                        + "INNER JOIN tbl_customers c ON t.c_id = c.c_id "
+                                                        + "WHERE c.u_id = ? AND "
+                                                        + getWhereClause(selectedSort))) { 
+            stmt.setInt(1, userId);
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                int transactionID = rs.getInt("t_id");
+                String pointPerson = rs.getString("c_name");
+                String deliveryMethod = rs.getString("t_deliveryMethod");
+                String dropOffDate = rs.getString("t_dropOffDate");
+                String submittedDate = rs.getString("t_submittedDate");
+                String completedDate = rs.getString("t_completedDate");
+                String transactionStatus = rs.getString("t_transacStatus");
+                String paymentStatus = rs.getString("t_paymentStatus");
+
+                if (completedDate == null){
+                    completedDate = "Not yet completed.";
+                } else {
+                    completedDate = rs.getString("t_completedDate");
+                }
+                
+                model.addRow(new Object[]{transactionID, pointPerson, deliveryMethod, dropOffDate, completedDate, submittedDate, transactionStatus, paymentStatus});
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
+    
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         SessionManager.clearLoggedInUser();
         MainPanel mainPanel = new MainPanel();
@@ -97,13 +210,37 @@ public class CustomerPanel extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLogoutActionPerformed
 
     private void btnBookFormActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBookFormActionPerformed
-        BookingForm bookingForm = new BookingForm();
+        BookingFormPanel bookingForm = new BookingFormPanel();
         bookingForm.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnBookFormActionPerformed
 
+    private void cbSortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSortActionPerformed
+        selectedSort = (String) cbSort.getSelectedItem();
+        displayTransactions(selectedSort);
+    }//GEN-LAST:event_cbSortActionPerformed
+
+    private String getWhereClause(String selectedSort) {
+        switch(selectedSort) {
+            case "All":
+                return "(t.t_transacStatus IN ('pending', 'request cancel', 'cancelled', 'approved') OR t.t_completedDate IS NOT NULL)";
+            case "Pending":
+                return "t.t_transacStatus = 'pending'";
+            case "Approved":
+                return "t.t_transacStatus = 'approved'";
+            case "Request Cancel":
+                return "t.t_transacStatus = 'request cancel'";
+            case "Cancelled":
+                return "t.t_transacStatus = 'cancelled'";
+            case "Completed":
+                return "t.t_completedDate IS NOT NULL";
+            default:
+                return "";
+        }
+    }
+    
      private void displayLoggedInUser() {
-        String loggedInUsername = SessionManager.getLoggedInUser();
+        loggedInUsername = SessionManager.getLoggedInUser();
         if (loggedInUsername != null) {
             lblUsername.setText("Logged in as: " + loggedInUsername);
         } else {
@@ -149,7 +286,10 @@ public class CustomerPanel extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBookForm;
     private javax.swing.JButton btnLogout;
+    private javax.swing.JComboBox<String> cbSort;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblUsername;
+    private javax.swing.JTable tblTransactions;
     // End of variables declaration//GEN-END:variables
 }

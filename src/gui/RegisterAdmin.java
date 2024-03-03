@@ -12,7 +12,7 @@ import java.sql.SQLException;
  *
  * @author Luisa Eustaquio
  */
-public class TempAdminReg {
+public class RegisterAdmin {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String username = "";

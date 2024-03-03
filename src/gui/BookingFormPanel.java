@@ -6,12 +6,12 @@ import java.text.SimpleDateFormat;
  *
  * @author Luisa Eustaquio
  */
-public class BookingForm extends javax.swing.JFrame {
+public class BookingFormPanel extends javax.swing.JFrame {
 
     /**
      * Creates new form BookingForm
      */
-    public BookingForm() {
+    public BookingFormPanel() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -55,11 +55,6 @@ public class BookingForm extends javax.swing.JFrame {
         cbService.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fresh Essentials", "Gentle Care", "Sparkle & Shine", "Luxury Bliss", "Royal Elegance" }));
 
         cbAddOns.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "None", "Pack 1", "Pack 2", "Pack 3", "Pack 4" }));
-        cbAddOns.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbAddOnsActionPerformed(evt);
-            }
-        });
 
         btnReview.setText("Review");
         btnReview.addActionListener(new java.awt.event.ActionListener() {
@@ -127,14 +122,7 @@ public class BookingForm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private String selectedAddOn;
-    private String selectedDelivery;
-    private String selectedService;
-    private String address;
-    private String contact;
-    private String name;
-    private String note;
-    private String tempDate;
+    private String selectedAddOn, selectedDelivery, selectedService, address, contact, name, note, tempDate;
     
     private void btnReviewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReviewActionPerformed
        reviewInput();
@@ -149,10 +137,6 @@ public class BookingForm extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnBackActionPerformed
 
-    private void cbAddOnsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbAddOnsActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbAddOnsActionPerformed
-
     private void reviewInput() {
         selectedAddOn = (String) cbAddOns.getSelectedItem();
         selectedDelivery = (String) cbDelivery.getSelectedItem();
@@ -163,9 +147,9 @@ public class BookingForm extends javax.swing.JFrame {
         note = fldNote.getText();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         tempDate = dateFormat.format(fldDate.getDate());
-        ReviewDialog reviewDialog = new ReviewDialog(this, true);
-        reviewDialog.setReviewDetails(address, contact, name, selectedService, selectedAddOn, selectedDelivery, note, tempDate);
-        reviewDialog.setVisible(true);
+        CustomerReviewDialog customerReviewDialog = new CustomerReviewDialog(this, true);
+        customerReviewDialog.setReviewDetails(address, contact, name, selectedService, selectedAddOn, selectedDelivery, note, tempDate);
+        customerReviewDialog.setVisible(true);
     }
     
     /**
@@ -185,20 +169,21 @@ public class BookingForm extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BookingForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BookingFormPanel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BookingForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BookingFormPanel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BookingForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BookingFormPanel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BookingForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BookingFormPanel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new BookingForm().setVisible(true);
+                new BookingFormPanel().setVisible(true);
             }
         });
     }
