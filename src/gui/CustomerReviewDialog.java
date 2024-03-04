@@ -12,15 +12,15 @@ import javax.swing.SwingUtilities;
  *
  * @author Luisa Eustaquio
  */
-public class ReviewDialog extends javax.swing.JDialog {
+public class CustomerReviewDialog extends javax.swing.JDialog {
 
     private int userID, serviceID, addOnsID;
-    private String finAddress, finContact, finName, finDelivery, finNote, finDate;
+    private String finAddress, finContact, finName, finService, finAddOns, finDelivery, finNote, finDate;
     
     /**
      * Creates new form ReviewDialog
      */
-    public ReviewDialog(java.awt.Frame parent, boolean modal) {
+    public CustomerReviewDialog(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         setUndecorated(true);
         initComponents();
@@ -191,7 +191,11 @@ public class ReviewDialog extends javax.swing.JDialog {
     }//GEN-LAST:event_btnEditActionPerformed
 
     private void btnBookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBookActionPerformed
-        if (userID != -1) {
+        if (userID != -1) {       
+            getServiceID(finService);
+            if(!finAddOns.equals("None")){
+                getAddOnsID(finAddOns);
+            }
             insertCustomerRecord();
             submitBookRequest();
         } else {
@@ -212,30 +216,11 @@ public class ReviewDialog extends javax.swing.JDialog {
         finAddress = address;
         finContact = contact;
         finName = name;
+        finService = service;
+        finAddOns = addOns;
         finDelivery = delivery;
         finNote = note;
         finDate = date;
-        
-        getServiceID(service);
-        if(!addOns.equals("None")){
-            getAddOnsID(addOns);
-        }
-    }
-
-    private boolean customerRecordExists() {
-        try (Connection conn = DatabaseUtils.getConnection()) {
-            String sql = "SELECT COUNT(*) FROM tbl_customers WHERE u_id = ?";
-            try (PreparedStatement stmt = conn.prepareStatement(sql)) {
-                stmt.setInt(1, userID);
-                ResultSet rs = stmt.executeQuery();
-                if (rs.next()) {
-                    return rs.getInt(1) > 0;
-                }
-            }
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }
-        return false;
     }
 
     private void insertCustomerRecord() {
@@ -387,20 +372,21 @@ public class ReviewDialog extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ReviewDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CustomerReviewDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ReviewDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CustomerReviewDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ReviewDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CustomerReviewDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ReviewDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CustomerReviewDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                ReviewDialog dialog = new ReviewDialog(new javax.swing.JFrame(), true);
+                CustomerReviewDialog dialog = new CustomerReviewDialog(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {

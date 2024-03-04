@@ -70,13 +70,13 @@ public class MainPanel extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        Login login = new Login();
+        LoginPanel login = new LoginPanel();
         login.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
-        Register register = new Register();
+        RegisterPanel register = new RegisterPanel();
         register.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnRegisterActionPerformed
