@@ -56,8 +56,10 @@ public class CustomerPanel extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblTransactions = new javax.swing.JTable();
         cbSort = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnBookForm.setText("Book");
         btnBookForm.addActionListener(new java.awt.event.ActionListener() {
@@ -65,11 +67,14 @@ public class CustomerPanel extends javax.swing.JFrame {
                 btnBookFormActionPerformed(evt);
             }
         });
+        getContentPane().add(btnBookForm, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 20, 110, -1));
 
         jLabel1.setText("Customer Panel");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, -1, -1));
 
         lblUsername.setText("USERNAME");
         lblUsername.setToolTipText("");
+        getContentPane().add(lblUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 128, -1));
 
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
@@ -77,6 +82,7 @@ public class CustomerPanel extends javax.swing.JFrame {
                 btnLogoutActionPerformed(evt);
             }
         });
+        getContentPane().add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 20, -1, -1));
 
         tblTransactions.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -96,57 +102,19 @@ public class CustomerPanel extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblTransactions);
 
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 106, 860, 456));
+
         cbSort.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "Pending", "Approved", "Request Cancel", "Cancelled", "Completed" }));
         cbSort.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbSortActionPerformed(evt);
             }
         });
+        getContentPane().add(cbSort, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 60, 180, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 644, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jLabel1)
-                                .addGap(83, 83, 83)))
-                        .addComponent(cbSort, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(33, 33, 33)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnBookForm, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnLogout, javax.swing.GroupLayout.Alignment.TRAILING))))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnBookForm)
-                            .addComponent(lblUsername))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnLogout)
-                            .addComponent(jLabel1)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(cbSort, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(31, 31, 31)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 456, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/dbts2.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 570));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -288,6 +256,7 @@ public class CustomerPanel extends javax.swing.JFrame {
     private javax.swing.JButton btnLogout;
     private javax.swing.JComboBox<String> cbSort;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblUsername;
     private javax.swing.JTable tblTransactions;

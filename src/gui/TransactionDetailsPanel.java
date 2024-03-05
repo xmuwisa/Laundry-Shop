@@ -41,6 +41,11 @@ public class TransactionDetailsPanel extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnApproveTransac = new javax.swing.JButton();
+        btnCancelTransac = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
+        btnUpdate = new javax.swing.JButton();
+        btnDelete = new javax.swing.JButton();
         lblDropOffDate = new javax.swing.JLabel();
         lblTotal = new javax.swing.JLabel();
         lblSubmittedDate = new javax.swing.JLabel();
@@ -50,194 +55,186 @@ public class TransactionDetailsPanel extends javax.swing.JFrame {
         lblPaymentStatus = new javax.swing.JLabel();
         lblName = new javax.swing.JLabel();
         lblDeliveryMethod = new javax.swing.JLabel();
-        btnApproveTransac = new javax.swing.JButton();
         lblContact = new javax.swing.JLabel();
-        btnCancelTransac = new javax.swing.JButton();
         lblAddress = new javax.swing.JLabel();
         lblTransactionID = new javax.swing.JLabel();
         lblKilo = new javax.swing.JLabel();
-        btnBack = new javax.swing.JButton();
-        btnUpdate = new javax.swing.JButton();
-        btnDelete = new javax.swing.JButton();
         lblService = new javax.swing.JLabel();
         lblAddOn = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        lblDropOffDate.setText("jLabel3");
-
-        lblTotal.setText("jLabel3");
-
-        lblSubmittedDate.setText("jLabel3");
-
-        lblNote.setText("jLabel3");
-
-        lblCompletedDate.setText("jLabel3");
-
-        lblTransacStatus.setText("jLabel3");
-
-        lblPaymentStatus.setText("jLabel3");
-
-        lblName.setText("jLabel1");
-
-        lblDeliveryMethod.setText("jLabel3");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnApproveTransac.setBackground(new java.awt.Color(204, 255, 204));
+        btnApproveTransac.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         btnApproveTransac.setText("Approve Transaction");
         btnApproveTransac.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnApproveTransacActionPerformed(evt);
             }
         });
-
-        lblContact.setText("jLabel2");
+        getContentPane().add(btnApproveTransac, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 530, -1, -1));
 
         btnCancelTransac.setBackground(new java.awt.Color(255, 0, 0));
+        btnCancelTransac.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         btnCancelTransac.setText("Cancel Transaction");
         btnCancelTransac.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelTransacActionPerformed(evt);
             }
         });
+        getContentPane().add(btnCancelTransac, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 530, -1, -1));
 
-        lblAddress.setText("jLabel3");
-
-        lblTransactionID.setText("jLabel1");
-
-        lblKilo.setText("jLabel3");
-
+        btnBack.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
+        btnUpdate.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateActionPerformed(evt);
             }
         });
+        getContentPane().add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 450, -1, -1));
 
+        btnDelete.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteActionPerformed(evt);
             }
         });
+        getContentPane().add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 450, -1, -1));
+
+        lblDropOffDate.setText("jLabel3");
+        getContentPane().add(lblDropOffDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 240, -1, -1));
+
+        lblTotal.setText("jLabel3");
+        getContentPane().add(lblTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 360, -1, -1));
+
+        lblSubmittedDate.setText("jLabel3");
+        getContentPane().add(lblSubmittedDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, -1, -1));
+
+        lblNote.setText("jLabel3");
+        getContentPane().add(lblNote, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, -1, -1));
+
+        lblCompletedDate.setText("jLabel3");
+        getContentPane().add(lblCompletedDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 300, -1, -1));
+
+        lblTransacStatus.setText("jLabel3");
+        getContentPane().add(lblTransacStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 120, -1, -1));
+
+        lblPaymentStatus.setText("jLabel3");
+        getContentPane().add(lblPaymentStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, -1, -1));
+
+        lblName.setText("jLabel1");
+        getContentPane().add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, -1, -1));
+
+        lblDeliveryMethod.setText("jLabel3");
+        getContentPane().add(lblDeliveryMethod, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, -1, -1));
+
+        lblContact.setText("jLabel2");
+        getContentPane().add(lblContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, -1, -1));
+
+        lblAddress.setText("jLabel3");
+        getContentPane().add(lblAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, -1, -1));
+
+        lblTransactionID.setText("jLabel1");
+        getContentPane().add(lblTransactionID, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, -1));
+
+        lblKilo.setText("jLabel3");
+        getContentPane().add(lblKilo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, -1, -1));
 
         lblService.setText("jLabel1");
+        getContentPane().add(lblService, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, -1, -1));
 
         lblAddOn.setText("jLabel1");
+        getContentPane().add(lblAddOn, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblTransactionID)
-                    .addComponent(lblCompletedDate)
-                    .addComponent(lblSubmittedDate)
-                    .addComponent(lblDropOffDate)
-                    .addComponent(lblNote)
-                    .addComponent(lblTotal)
-                    .addComponent(lblKilo)
-                    .addComponent(lblAddress)
-                    .addComponent(lblContact)
-                    .addComponent(lblName))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(120, 120, 120)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblPaymentStatus)
-                                    .addComponent(lblTransacStatus)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(81, 81, 81)
-                                .addComponent(lblDeliveryMethod))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(193, 193, 193)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnApproveTransac)
-                                    .addComponent(btnCancelTransac))))
-                        .addContainerGap(268, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(btnBack)
-                                .addGap(25, 25, 25))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(btnUpdate)
-                                .addGap(108, 108, 108))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(73, 73, 73)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblService)
-                            .addComponent(lblAddOn))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnDelete)
-                        .addGap(99, 99, 99))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblTransactionID)
-                            .addComponent(btnBack))
-                        .addGap(31, 31, 31)
-                        .addComponent(lblName)
-                        .addGap(27, 27, 27)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(lblDeliveryMethod)
-                                .addGap(8, 8, 8)
-                                .addComponent(lblAddress)
-                                .addGap(10, 10, 10)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(lblKilo)
-                                        .addGap(14, 14, 14)
-                                        .addComponent(lblTotal))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(lblTransacStatus)
-                                        .addGap(33, 33, 33)
-                                        .addComponent(lblPaymentStatus)))
-                                .addGap(26, 26, 26)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(lblNote)
-                                    .addComponent(btnUpdate))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(lblDropOffDate)
-                                            .addComponent(btnDelete))
-                                        .addGap(23, 23, 23)
-                                        .addComponent(lblSubmittedDate)
-                                        .addGap(35, 35, 35)
-                                        .addComponent(lblCompletedDate))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(lblService)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(lblAddOn))))
-                            .addComponent(lblContact)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(btnApproveTransac)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnCancelTransac)))
-                .addContainerGap(135, Short.MAX_VALUE))
-        );
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel1.setText("Address:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel2.setText("Date Submitted");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 340, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel3.setText("Customer Name:");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel4.setText("Contact Number:");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel5.setText("Addtional Note:");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel6.setText("Add ons:");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel7.setText("Transaction ID:");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel8.setText("Total:");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 340, -1, -1));
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel9.setText("Service Type:");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, -1, -1));
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel10.setText("Kilo:");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, -1, -1));
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel11.setText("Delivery Method:");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, -1, -1));
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel12.setText("Transaction Status");
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 100, -1, -1));
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel13.setText("Payment Status:");
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, -1, -1));
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel14.setText("Drop off Date:");
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, -1, -1));
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel15.setText("Date Completed:");
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 280, -1, -1));
+
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/6.png"))); // NOI18N
+        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -543,6 +540,22 @@ public class TransactionDetailsPanel extends javax.swing.JFrame {
     private javax.swing.JButton btnCancelTransac;
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnUpdate;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel lblAddOn;
     private javax.swing.JLabel lblAddress;
     private javax.swing.JLabel lblCompletedDate;

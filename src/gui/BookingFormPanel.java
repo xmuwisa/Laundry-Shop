@@ -36,88 +36,101 @@ public class BookingFormPanel extends javax.swing.JFrame {
         cbAddOns = new javax.swing.JComboBox<>();
         btnReview = new javax.swing.JButton();
         fldDate = new com.toedter.calendar.JDateChooser();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(fldName, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 250, -1));
+        getContentPane().add(fldContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 250, -1));
+        getContentPane().add(fldAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 250, -1));
 
         fldNote.setColumns(20);
         fldNote.setRows(5);
         jScrollPane1.setViewportView(fldNote);
 
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 420, -1));
+
+        btnBack.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 570, -1, -1));
 
         cbDelivery.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pick up", "Deliver" }));
+        cbDelivery.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbDeliveryActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cbDelivery, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, 162, -1));
 
         cbService.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fresh Essentials", "Gentle Care", "Sparkle & Shine", "Luxury Bliss", "Royal Elegance" }));
+        cbService.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbServiceActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cbService, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 420, 162, -1));
 
         cbAddOns.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "None", "Pack 1", "Pack 2", "Pack 3", "Pack 4" }));
+        cbAddOns.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbAddOnsActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cbAddOns, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 480, 160, -1));
 
+        btnReview.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         btnReview.setText("Review");
         btnReview.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnReviewActionPerformed(evt);
             }
         });
+        getContentPane().add(btnReview, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 570, -1, -1));
+        getContentPane().add(fldDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 480, 162, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(fldDate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(fldAddress)
-                            .addComponent(fldName, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(fldContact)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGap(106, 106, 106)
-                                .addComponent(cbAddOns, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(cbDelivery, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cbService, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnBack, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(btnReview)
-                                .addGap(68, 68, 68)))))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(fldName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBack))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(fldContact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(fldAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(cbDelivery, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cbService, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(btnReview)))
-                .addGap(14, 14, 14)
-                .addComponent(cbAddOns, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(fldDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        jLabel1.setText("Booking Form");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, -1, -1));
+
+        jLabel2.setText("Service Type:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 400, -1, -1));
+
+        jLabel3.setText("Customer Name:");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
+
+        jLabel4.setText("Contact Number:");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
+
+        jLabel5.setText("Address:");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
+
+        jLabel6.setText("Additional Note:");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
+
+        jLabel7.setText("Drop off Date:");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 460, -1, -1));
+
+        jLabel8.setText("Delivery Method:");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, -1, -1));
+
+        jLabel9.setText("Add ons:");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, -1, -1));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/4.png"))); // NOI18N
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 470, 640));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -136,6 +149,18 @@ public class BookingFormPanel extends javax.swing.JFrame {
             this.dispose();
         }
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void cbDeliveryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbDeliveryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbDeliveryActionPerformed
+
+    private void cbServiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbServiceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbServiceActionPerformed
+
+    private void cbAddOnsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbAddOnsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbAddOnsActionPerformed
 
     private void reviewInput() {
         selectedAddOn = (String) cbAddOns.getSelectedItem();
@@ -199,6 +224,16 @@ public class BookingFormPanel extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser fldDate;
     private javax.swing.JTextField fldName;
     private javax.swing.JTextArea fldNote;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
