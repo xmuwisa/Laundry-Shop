@@ -458,7 +458,7 @@ public class TransactionDetailsPanel extends javax.swing.JFrame {
                     + "FROM tbl_transactions t "
                     + "INNER JOIN tbl_customers c ON t.c_id = c.c_id "
                     + "INNER JOIN tbl_services s ON t.s_id = s.s_id "
-                    + "INNER JOIN tbl_addons a ON t.a_id = a.a_id "
+                    + "INNER JOIN tbl_addOns a ON t.a_id = a.a_id "
                     + "WHERE t.t_id = ?")) {
             stmt.setInt(1, transactionID);
             try (ResultSet rs = stmt.executeQuery()) {
