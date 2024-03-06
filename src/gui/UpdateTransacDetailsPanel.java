@@ -79,110 +79,127 @@ public class UpdateTransacDetailsPanel extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(202, 210, 245));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        lblName.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         lblName.setText("jLabel1");
         jPanel1.add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 93, -1, -1));
 
+        lblContact.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         lblContact.setText("jLabel2");
         jPanel1.add(lblContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 138, -1, -1));
 
+        lblAddress.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         lblAddress.setText("jLabel3");
         jPanel1.add(lblAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 183, -1, -1));
 
+        lblTransactionID.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         lblTransactionID.setText("jLabel1");
         jPanel1.add(lblTransactionID, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 48, -1, -1));
 
+        lblNote.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         lblNote.setText("jLabel3");
         jPanel1.add(lblNote, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 50, -1, -1));
 
+        lblSubmittedDate.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         lblSubmittedDate.setText("jLabel3");
         jPanel1.add(lblSubmittedDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, -1, -1));
 
+        lblPaymentStatus.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         lblPaymentStatus.setText("jLabel3");
         jPanel1.add(lblPaymentStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 230, -1, -1));
 
+        lblTransacStatus.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         lblTransacStatus.setText("jLabel3");
         jPanel1.add(lblTransacStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 50, 20));
 
+        lblDropOff.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         lblDropOff.setText("jLabel3");
         jPanel1.add(lblDropOff, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 100, -1, -1));
 
+        lblService.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         lblService.setText("jLabel3");
         jPanel1.add(lblService, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, -1));
 
+        lblAddOn.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         lblAddOn.setText("jLabel3");
         jPanel1.add(lblAddOn, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 100, -1, -1));
 
+        lblDelivery.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         lblDelivery.setText("delivrymeth");
         jPanel1.add(lblDelivery, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 50, -1, -1));
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jLabel7.setText("Transaction ID:");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jLabel8.setText("Customer Name:");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jLabel9.setText("Contact Number:");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jLabel10.setText("Address:");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jLabel11.setText("Payment Status:");
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, -1, -1));
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jLabel12.setText("Service Type:");
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
 
-        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jLabel13.setText("Drop off Date:");
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 80, -1, -1));
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jLabel14.setText("Add ons:");
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, -1, -1));
 
-        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jLabel15.setText("Date Submitted:");
         jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, -1, -1));
 
-        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jLabel16.setText("Transaction Status:");
         jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, -1, -1));
 
-        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel17.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jLabel17.setText("Additional Note:");
         jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, -1, -1));
 
-        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel18.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jLabel18.setText("Delivery Method:");
         jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jLabel1.setText("Kilo:");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 120, -1, -1));
+
+        fldKilo.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         jPanel1.add(fldKilo, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 110, -1));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jLabel2.setText("Total Cost:");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 170, -1, -1));
+
+        fldTotal.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         jPanel1.add(fldTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 190, 110, -1));
 
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jLabel3.setText("Date Completed:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 220, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 220, -1, -1));
         jPanel1.add(dcCompleted, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 240, 110, -1));
 
         cbPayment.setBackground(new java.awt.Color(211, 223, 251));
-        cbPayment.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        cbPayment.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         cbPayment.setText("Paid");
         jPanel1.add(cbPayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 30, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 630, 290));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 630, 310));
 
         btnReview.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         btnReview.setText("Review");
@@ -200,10 +217,10 @@ public class UpdateTransacDetailsPanel extends javax.swing.JFrame {
                 btnBackActionPerformed(evt);
             }
         });
-        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 390, -1, -1));
+        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 390, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/7.png"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 690, 470));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 440));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

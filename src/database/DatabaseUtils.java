@@ -14,7 +14,7 @@ import java.sql.PreparedStatement;
  * @author Luisa Eustaquio
  */
 public class DatabaseUtils {
-    private static final String SCRIPT = "C:/Users/Maary/Documents/NetBeansProjects/Laundry-Shop/database_schema.sql";
+    private static final String SCRIPT = "\"C:/Users/franc/Documents/Career Dev/Programming & Career/Java/Laundry-Shop/src/database/database_schema.sql";
     private static final String ADDRESS = "jdbc:mysql://localhost:3306/";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "";
