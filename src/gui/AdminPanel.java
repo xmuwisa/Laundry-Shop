@@ -28,6 +28,7 @@ public class AdminPanel extends javax.swing.JFrame {
             @Override
             public void valueChanged(ListSelectionEvent e) {
                 if (!e.getValueIsAdjusting()) {
+                    System.out.println("Selecting row");
                     int selectedRow = tblTransactions.getSelectedRow();
                     if (selectedRow != -1) {
                         int transactionID = (int) tblTransactions.getValueAt(selectedRow, 0);
@@ -48,32 +49,50 @@ public class AdminPanel extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        cbSort = new javax.swing.JComboBox<>();
         lblUsername = new javax.swing.JLabel();
         btnLogout = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblTransactions = new javax.swing.JTable();
-        cbSort = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("Admin Panel");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 60, -1, -1));
+        cbSort.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
+        cbSort.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "Pending", "Approved", "Request Cancel", "Cancelled", "Completed" }));
+        cbSort.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbSortActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cbSort, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 120, 210, -1));
 
+        lblUsername.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         lblUsername.setText("USERNAME");
         lblUsername.setToolTipText("");
-        getContentPane().add(lblUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 15, 128, -1));
+        getContentPane().add(lblUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 128, 20));
 
+        btnLogout.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogoutActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 20, -1, -1));
+        getContentPane().add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, -1, -1));
 
+        jLabel3.setFont(new java.awt.Font("Arial", 3, 48)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Admin Panel");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 800, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user.png"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
+
+        tblTransactions.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         tblTransactions.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null}
@@ -92,18 +111,10 @@ public class AdminPanel extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblTransactions);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 920, 450));
-
-        cbSort.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "Pending", "Approved", "Request Cancel", "Cancelled", "Completed" }));
-        cbSort.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbSortActionPerformed(evt);
-            }
-        });
-        getContentPane().add(cbSort, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 60, 210, -1));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 780, 430));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/dbts2.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 570));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -231,8 +242,9 @@ public class AdminPanel extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogout;
     private javax.swing.JComboBox<String> cbSort;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblUsername;
     private javax.swing.JTable tblTransactions;

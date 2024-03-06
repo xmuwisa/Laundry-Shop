@@ -49,6 +49,7 @@ public class CustomerPanel extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel3 = new javax.swing.JLabel();
         btnBookForm = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         lblUsername = new javax.swing.JLabel();
@@ -59,7 +60,11 @@ public class CustomerPanel extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user.png"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
 
         btnBookForm.setText("Book");
         btnBookForm.addActionListener(new java.awt.event.ActionListener() {
@@ -67,22 +72,26 @@ public class CustomerPanel extends javax.swing.JFrame {
                 btnBookFormActionPerformed(evt);
             }
         });
-        getContentPane().add(btnBookForm, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 20, 110, -1));
+        getContentPane().add(btnBookForm, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 120, 180, -1));
 
+        jLabel1.setFont(new java.awt.Font("Arial", 3, 48)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Customer Panel");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 800, -1));
 
+        lblUsername.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         lblUsername.setText("USERNAME");
         lblUsername.setToolTipText("");
-        getContentPane().add(lblUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 128, -1));
+        getContentPane().add(lblUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 310, -1));
 
+        btnLogout.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogoutActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 20, -1, -1));
+        getContentPane().add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, -1, -1));
 
         tblTransactions.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -102,7 +111,7 @@ public class CustomerPanel extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblTransactions);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 106, 860, 456));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 780, 400));
 
         cbSort.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "Pending", "Approved", "Request Cancel", "Cancelled", "Completed" }));
         cbSort.addActionListener(new java.awt.event.ActionListener() {
@@ -110,11 +119,11 @@ public class CustomerPanel extends javax.swing.JFrame {
                 cbSortActionPerformed(evt);
             }
         });
-        getContentPane().add(cbSort, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 60, 180, -1));
+        getContentPane().add(cbSort, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 150, 180, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/dbts2.png"))); // NOI18N
         jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 570));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -257,6 +266,7 @@ public class CustomerPanel extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbSort;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblUsername;
     private javax.swing.JTable tblTransactions;

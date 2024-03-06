@@ -49,25 +49,38 @@ public class BookingFormPanel extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        fldName.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        fldName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fldNameActionPerformed(evt);
+            }
+        });
         getContentPane().add(fldName, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 250, -1));
+
+        fldContact.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         getContentPane().add(fldContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 250, -1));
+
+        fldAddress.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         getContentPane().add(fldAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 250, -1));
 
         fldNote.setColumns(20);
+        fldNote.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         fldNote.setRows(5);
         jScrollPane1.setViewportView(fldNote);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 420, -1));
 
-        btnBack.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        btnBack.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 570, -1, -1));
+        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 550, -1, -1));
 
+        cbDelivery.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         cbDelivery.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pick up", "Deliver" }));
         cbDelivery.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,6 +89,7 @@ public class BookingFormPanel extends javax.swing.JFrame {
         });
         getContentPane().add(cbDelivery, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, 162, -1));
 
+        cbService.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         cbService.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fresh Essentials", "Gentle Care", "Sparkle & Shine", "Luxury Bliss", "Royal Elegance" }));
         cbService.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,6 +98,7 @@ public class BookingFormPanel extends javax.swing.JFrame {
         });
         getContentPane().add(cbService, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 420, 162, -1));
 
+        cbAddOns.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         cbAddOns.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "None", "Pack 1", "Pack 2", "Pack 3", "Pack 4" }));
         cbAddOns.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,40 +107,50 @@ public class BookingFormPanel extends javax.swing.JFrame {
         });
         getContentPane().add(cbAddOns, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 480, 160, -1));
 
-        btnReview.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        btnReview.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         btnReview.setText("Review");
         btnReview.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnReviewActionPerformed(evt);
             }
         });
-        getContentPane().add(btnReview, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 570, -1, -1));
+        getContentPane().add(btnReview, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 550, -1, -1));
         getContentPane().add(fldDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 480, 162, -1));
 
+        jLabel1.setFont(new java.awt.Font("Arial", 3, 36)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Booking Form");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 470, -1));
 
+        jLabel2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel2.setText("Service Type:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 400, -1, -1));
 
+        jLabel3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel3.setText("Customer Name:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
+        jLabel4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel4.setText("Contact Number:");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
 
+        jLabel5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel5.setText("Address:");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
 
+        jLabel6.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel6.setText("Additional Note:");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
 
+        jLabel7.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel7.setText("Drop off Date:");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 460, -1, -1));
 
+        jLabel8.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel8.setText("Delivery Method:");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, -1, -1));
 
+        jLabel9.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel9.setText("Add ons:");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, -1, -1));
 
@@ -161,6 +186,10 @@ public class BookingFormPanel extends javax.swing.JFrame {
     private void cbAddOnsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbAddOnsActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbAddOnsActionPerformed
+
+    private void fldNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fldNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fldNameActionPerformed
 
     private void reviewInput() {
         selectedAddOn = (String) cbAddOns.getSelectedItem();

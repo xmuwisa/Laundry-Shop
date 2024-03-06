@@ -34,16 +34,16 @@ public class AdminReviewDialog extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnEdit = new javax.swing.JButton();
+        btnUpdate = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         lblNote = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         lblDelivery = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         lblService = new javax.swing.JLabel();
-        btnEdit = new javax.swing.JButton();
         lblAddOns = new javax.swing.JLabel();
-        btnUpdate = new javax.swing.JButton();
-        jLabel14 = new javax.swing.JLabel();
         lblDropOff = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -66,27 +66,6 @@ public class AdminReviewDialog extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel6.setText("Service:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, -1));
-
-        lblNote.setText("jLabel1");
-        getContentPane().add(lblNote, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, 227, -1));
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel7.setText("Add Ons:");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, -1, 20));
-
-        lblDelivery.setText("jLabel1");
-        getContentPane().add(lblDelivery, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 200, -1));
-
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel8.setText("Drop Off Date:");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, -1, 20));
-
-        lblService.setText("jLabel1");
-        getContentPane().add(lblService, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 180, -1));
-
         btnEdit.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         btnEdit.setText("Edit");
         btnEdit.addActionListener(new java.awt.event.ActionListener() {
@@ -95,9 +74,6 @@ public class AdminReviewDialog extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btnEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, -1, -1));
-
-        lblAddOns.setText("jLabel1");
-        getContentPane().add(lblAddOns, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 110, 180, 20));
 
         btnUpdate.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         btnUpdate.setText("Update");
@@ -108,68 +84,106 @@ public class AdminReviewDialog extends javax.swing.JDialog {
         });
         getContentPane().add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, -1, -1));
 
-        jLabel14.setText("Transaction Details");
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 200, -1));
+        jLabel13.setFont(new java.awt.Font("Arial", 3, 36)); // NOI18N
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setText("Transaction Details");
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 730, -1));
 
+        jLabel6.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        jLabel6.setText("Service:");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
+
+        lblNote.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
+        lblNote.setText("jLabel1");
+        getContentPane().add(lblNote, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, 200, -1));
+
+        jLabel7.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        jLabel7.setText("Add Ons:");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, -1, 20));
+
+        lblDelivery.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
+        lblDelivery.setText("jLabel1");
+        getContentPane().add(lblDelivery, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, 170, -1));
+
+        jLabel8.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        jLabel8.setText("Drop Off Date:");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, -1, 20));
+
+        lblService.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
+        lblService.setText("jLabel1");
+        getContentPane().add(lblService, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 150, -1));
+
+        lblAddOns.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
+        lblAddOns.setText("jLabel1");
+        getContentPane().add(lblAddOns, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 120, 150, 20));
+
+        lblDropOff.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         lblDropOff.setText("jLabel1");
-        getContentPane().add(lblDropOff, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 130, 180, 20));
+        getContentPane().add(lblDropOff, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 140, 150, 20));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jLabel1.setText("Customer Name:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jLabel2.setText("Contact Number:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jLabel3.setText("Customer Address:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, -1, -1));
 
+        lblName.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         lblName.setText("jLabel1");
-        getContentPane().add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 220, -1));
+        getContentPane().add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, 190, -1));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jLabel4.setText("Additional Note:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
 
+        lblContact.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         lblContact.setText("jLabel1");
-        getContentPane().add(lblContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 227, -1));
+        getContentPane().add(lblContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 200, -1));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jLabel5.setText("Delivery Method:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, -1, -1));
 
+        lblAddress.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         lblAddress.setText("jLabel1");
-        getContentPane().add(lblAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, 227, -1));
+        getContentPane().add(lblAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 200, -1));
 
+        lblCompleted.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         lblCompleted.setText("jLabel1");
-        getContentPane().add(lblCompleted, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 150, 180, 20));
+        getContentPane().add(lblCompleted, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 160, 150, 20));
 
+        lblPaid.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         lblPaid.setText("jLabel1");
-        getContentPane().add(lblPaid, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 170, 180, 20));
+        getContentPane().add(lblPaid, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 180, 150, 20));
 
+        lblKilo.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         lblKilo.setText("jLabel1");
-        getContentPane().add(lblKilo, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 190, 180, 20));
+        getContentPane().add(lblKilo, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, 150, 20));
 
+        lblTotal.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         lblTotal.setText("jLabel1");
-        getContentPane().add(lblTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 210, 180, 20));
+        getContentPane().add(lblTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, 150, 20));
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jLabel9.setText("Completed Date:");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 150, -1, 20));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, -1, 20));
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jLabel10.setText("Payment Status:");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 170, 100, 20));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, 100, 20));
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jLabel11.setText("Kilo:");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 190, -1, 20));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, -1, 20));
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jLabel12.setText("Total:");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, -1, 20));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 220, -1, 20));
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/3.png"))); // NOI18N
         getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -220, 750, 620));
@@ -299,7 +313,7 @@ public class AdminReviewDialog extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

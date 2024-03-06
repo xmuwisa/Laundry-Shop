@@ -30,71 +30,79 @@ public class RegisterPanel extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel5 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         fldRegUsername = new javax.swing.JTextField();
         fldRegPass = new javax.swing.JPasswordField();
         fldConfirmRegPass = new javax.swing.JPasswordField();
         fldRegister = new javax.swing.JButton();
         btnLogin = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(fldRegUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 200, -1));
-        getContentPane().add(fldRegPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 200, -1));
-        getContentPane().add(fldConfirmRegPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 200, -1));
 
-        fldRegister.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 102, 204));
+        jLabel5.setText("______________________________");
+        jLabel5.setToolTipText("");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 410, -1, 30));
+
+        jLabel10.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel10.setText("Username:");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 220, -1, -1));
+
+        jLabel11.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel11.setText("Password:");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 270, -1, -1));
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setText("Already have an account?");
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 460, 320, -1));
+
+        jLabel9.setFont(new java.awt.Font("Arial", 3, 48)); // NOI18N
+        jLabel9.setText("Register");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 100, 220, 70));
+
+        jLabel4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel4.setText("Enter your personal Information.");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 170, -1, -1));
+
+        jLabel13.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel13.setText("Confirm Password:");
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 320, -1, -1));
+        getContentPane().add(fldRegUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 240, 260, -1));
+        getContentPane().add(fldRegPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 290, 260, -1));
+        getContentPane().add(fldConfirmRegPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 340, 260, -1));
+
+        fldRegister.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
         fldRegister.setText("Register");
+        fldRegister.setMargin(new java.awt.Insets(4, 14, 4, 14));
         fldRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fldRegisterActionPerformed(evt);
             }
         });
-        getContentPane().add(fldRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, 110, -1));
+        getContentPane().add(fldRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 380, 120, -1));
 
+        btnLogin.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         btnLogin.setText("Login");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLoginActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, -1, -1));
+        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 480, 80, -1));
 
-        jLabel2.setText("Confirm Password:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, -1, -1));
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/2.png"))); // NOI18N
-        jLabel6.setToolTipText("");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -180, 390, -1));
-
-        jLabel3.setText("Username:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, -1, -1));
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 102, 204));
-        jLabel7.setText("______________________________");
-        jLabel7.setToolTipText("");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, -1, 30));
-
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jLabel8.setText("Already have an account?");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, -1, -1));
-
-        jLabel5.setText("Password:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, -1, -1));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/1.png"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 20, 460, 340));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/stacked-waves-haikei (1).png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 380));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/PrePanel.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -224,12 +232,12 @@ public class RegisterPanel extends javax.swing.JFrame {
     private javax.swing.JTextField fldRegUsername;
     private javax.swing.JButton fldRegister;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 }
